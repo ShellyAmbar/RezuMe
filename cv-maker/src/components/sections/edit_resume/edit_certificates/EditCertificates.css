@@ -1,0 +1,15 @@
+.certificates-container {
+  width: 100%;
+  height: 200vh;
+  display: flex;
+  justify-content: baseline;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+}
+
+.certificates-container > h1 {
+  color: rgb(253, 253, 253);
+  font-size: 50px;
+}

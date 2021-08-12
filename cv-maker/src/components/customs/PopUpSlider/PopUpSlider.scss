@@ -1,0 +1,233 @@
+.slider {
+  width: 90%;
+  height: 90%;
+}
+
+.slider-title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vh;
+  color: rgb(88, 86, 86);
+  margin-bottom: 30px;
+}
+
+.card-wrapper-slider {
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  &:active,
+  &:hover,
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}
+
+.card-slider {
+  width: 100%;
+  height: 450px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+
+  .card-image-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #000;
+    transition: 0.5s;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &:hover {
+    img {
+      opacity: 0.4;
+      transition: 0.5s;
+    }
+    .card-image-slider {
+      transform: translateY(-100px);
+      transition: all 0.9s;
+    }
+  }
+}
+
+.card-slider:hover {
+  .social-icons-slider li a {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.social-icons-slider li a .fab {
+  transition: 0.8s;
+  &:hover {
+    transform: rotate(360deg);
+    color: #fff;
+  }
+}
+
+.social-icons-slider {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: flex;
+
+  li {
+    list-style: none;
+    a {
+      position: relative;
+      display: block;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      background: #fff;
+      font-size: 23px;
+      color: #333;
+      font-weight: bold;
+      margin: 0 6px;
+      transition: 0.4s;
+      transform: translateY(200px);
+      opacity: 0;
+    }
+  }
+}
+
+.social-icons-slider li a .fab {
+  transition: 0.8s;
+  &:hover {
+    transform: rotate(360deg);
+    color: #fff;
+  }
+}
+
+.card-slider:hover li:nth-child(1) a {
+  transition-delay: 0.1s;
+}
+.card-slider:hover li:nth-child(2) a {
+  transition-delay: 0.2s;
+}
+.card-slider:hover li:nth-child(3) a {
+  transition-delay: 0.3s;
+}
+
+.social-icons-slider li a:hover {
+  transition: 0.2s;
+  background: #000;
+
+  .fab {
+    color: #fff;
+  }
+}
+
+.details-slider {
+  position: absolute;
+  color: #000;
+  bottom: 400px;
+  left: 0;
+  background: rgba(172, 169, 169, 0.527);
+  width: 100%;
+  height: 120%;
+  z-index: 1;
+  padding: 10px;
+  transition: 0.6s;
+}
+
+.details-slider h2 {
+  margin: 30px 0;
+  padding: 0;
+  text-align: center;
+}
+.details-slider .sub-title-card {
+  font-size: 16px;
+  line-height: 2;
+  color: #333;
+  font-weight: 300;
+  display: block;
+}
+
+.card-slider:hover {
+  .details-slider {
+    bottom: 0;
+  }
+}
+
+.slick-slider {
+  .slick-dots {
+    bottom: -2vw;
+    li {
+      button {
+        width: 20px;
+        height: 20px;
+        border: 1px solid rgb(131, 127, 127);
+        border-radius: 20px;
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 10px;
+          height: 10px;
+          border-radius: 10px;
+          content: "";
+          text-align: center;
+          opacity: 0.5;
+          color: #000;
+          background-color: #fff;
+          transform: translate(-50%, -50%);
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      &.slick-active,
+      &:hover {
+        button {
+          border-color: tomato;
+          &::before {
+            background-color: tomato;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    opacity: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+  }
+
+  .slick-prev::before,
+  .slick-next::before {
+    color: rgb(126, 123, 123);
+  }
+  .slick-next {
+    right: -55px;
+  }
+  .slick-prev {
+    left: -55px;
+  }
+
+  .slick-prev:hover,
+  .slick-prev:focus,
+  .slick-next:hover,
+  .slick-next:focus {
+    color: #fff;
+    outline: none;
+    background: #fff;
+  }
+}

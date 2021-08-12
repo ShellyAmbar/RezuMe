@@ -1,0 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+.container_resume {
+  width: 100%;
+  height: 100%;
+}
